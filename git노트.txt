@@ -1,0 +1,72 @@
+작업지시서
+
+1. github에서 New버튼 클릭하여 웹레포를 만들어 줍니다.
+- proj-naver2
+- public
+2. 생성버튼 클릭
+:디폴트 브렌치 이름은 main
+3. url이 생성됨
+화면 오른쪽 초록 code버튼 > https://github.com/slalom0914/proj-naver2.git
+4. Add file버튼 클릭
+업로드할 파일(로컬PC)을 선택해서 업로드가 완료되면 화면 하단에
+commit버튼을 클릭합니다. - 추적 -해시값이 할당
+5. 로컬 레포(폴더)에서 웹 레포 내려 받기
+6. git clone https://github.com/slalom0914/proj-naver2.git 엔터
+7. 현재 내가 바라보는 폴더 아래에 proj-naver2폴더가 생성됩니다.
+이 때 절대로 폴더이름을 직접 만들어서 진행하지 않습니다.
+
+git download 설치 옵션
+
+git merge [--ff] kiwi
+
+git merge --no-ff
+
+실습 조건
+브렌치를 3개 생성하였습니다(master, kiwi, apple)
+
+실습목표
+나는 머지를 할 수 있다.
+1)--ff : fast forward merge  디폴트값 - 그래서 생략이 가능합니다.
+git merge [--ff] kiwi
+: 커밋이 일어나지 않습니다.
+: 브렌치를 삭제하면 히스토리가 남지 않습니다.(선호합니다)
+:master브렌치와 kiwi브렌치가 같은 HEAD를 바라보고 있다
+git merge --ff apple
+2)--no-ff
+git merge --no-ff kiwi
+:merge commit이 일어납니다. - 히스토리가 남습니다.(kiwi(자기자신 해시값만 있다), master-새로운해시값이 있다)
+:kiwi의 위치와 master위치가 다릅니다.
+
+공통점 : 둘 다 master브렌치를 기준으로 하여 머지 하였다.
+
+
+merge-step2(master + kiwi -> ff)
+
+merge-step3(master + kiwi -> no-ff)
+
+---------------------------------------------------------------
+2개만 머지할 때와 3개 이상을 머지할 때가 동일한가?
+아님 다른 상황이 발생하나요?
+
+merge-step21(ff) - ((master+kiwi) + apple)
+:결론 - master와 kiwi를 머지한 후에 apple 머지를 디폴트 진행하더라도
+merge commit 일어납니다.
+merge-step22(no-ff)
+완결편
+둘간의 관계에서 머지는 ff와 no-ff가 다르지만(merge commit)
+셋 이상 관계에서는 차이가 없었다.(time line)
+
+
+
+빅데이터 EDA를 이용한 인사이트 발견 및 머신러닝 분석
+
+타이타닉#1 - EDA실습, 시각화실습, 통계, 데이터분석
+- 코랩 한글처리
+
+타이타닉#2 - 머신러닝 분석
+
+
+Git - 두번째 시간
+
+
+알고리즘 문제풀이
